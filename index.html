@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mobile CAPTCHA</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,13 +15,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2234538944055032');
+fbq('init', '1675656813428105');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2234538944055032&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+<!-- End Meta Pixel Code -->
 
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -229,6 +226,9 @@ transparent 100%
 </head>
 
 <body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1675656813428105&ev=PageView&noscript=1"
+/></noscript>
 
 <div class="wrapper">
 <div class="container">
@@ -266,6 +266,12 @@ N.-Ẹ-.P ĐÂU ĐÊ K1CH HOẠT TOAN BO UU ĐAI TAN THU
 <script>
 function verifyCaptcha(checkbox) {
 if (checkbox.checked) {
+// Bắn đồng thời 2 sự kiện: Đăng ký (Lead) và Hoàn tất đăng ký (CompleteRegistration)
+if (typeof fbq !== 'undefined') {
+  fbq('track', 'Lead');
+  fbq('track', 'CompleteRegistration');
+}
+
 // Khóa không cho nhấn lại
 checkbox.disabled = true;
 document.getElementById("captchaLabel").style.cursor = "default";
@@ -286,17 +292,12 @@ startEffect(); // Kích hoạt thanh ánh sáng & chuyển hướng
 }
 
 function startEffect() {
-// Bắn sự kiện Hoàn tất đăng ký (CompleteRegistration) sang Facebook Pixel
-if (typeof fbq === 'function') {
-  fbq('track', 'CompleteRegistration');
-}
-
 const bar = document.getElementById("lightBar");
 bar.style.transition = "left 0.5s linear";
 bar.style.left = "100%";
 
 setTimeout(() => {
-window.location.href = "https://dk.giaitrix8.online/?a=five_c8847eb854a37a794cab25577b10084d&utm_campaign=tiktokads&utm_source=quyetads&utm_medium=conversion&utm_term=%7B%7Bad.id%7D%7D&utm_content=game";
+window.location.href = "https://play.sancohd88.xyz/?a=five_ef00dca2363193bf5366b0c243acf1f8&utm_campaign=facebookads&utm_source=quyetads&utm_medium=conversion&utm_term=%7B%7Bad.id%7D%7D&utm_content=sport";
 }, 500);
 }
 </script>
